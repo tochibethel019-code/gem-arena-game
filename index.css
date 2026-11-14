@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes floatUp {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -120%) scale(1.15);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -180%) scale(1.25);
+    }
+  }
+
+  .animate-float-up {
+    animation: floatUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020617;
+  color: #f8fafc;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
